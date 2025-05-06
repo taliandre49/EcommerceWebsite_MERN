@@ -47,6 +47,11 @@
     color: white;
     font-size: 22px;
     font-weight: 500;
+    cursor: pointer;
+    transition: transform 250ms ease-in-out ;
+}
+.hero-latest-btn:hover, .hero-latest-btn:focus-visible {
+    transform: scale(1.1);
 }
 
 .hero-right{
