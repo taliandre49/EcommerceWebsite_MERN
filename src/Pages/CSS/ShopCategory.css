@@ -22,11 +22,12 @@
     font-weight: 600;
 }
 .shopcategory-products{
-    margin: 20px 170px;
+    margin: 30px 130px;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 80px;
     cursor: pointer;
+    column-gap: 30px;
 }
 .shopcategory-loadmore{
     display: flex;

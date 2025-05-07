@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import logo from '../Assests/Frontend_Assets/logo.png';
 import cart_icon from '../Assests/Frontend_Assets/cart_icon.png'
 import { Link } from 'react-router-dom';
+import { ShopContext } from '../../Context/ShopContext';
 // import shirt_logo from '../Assests/Frontend_Assets/clothingecommerce.png'
 // import iconShop from '../Assests/Frontend_Assets/iconecon.jpeg'
 
 export const Navbar = () => {
     const [menu, setMenu] = useState('shop');
-    
+    const {getTotalCartItems} = useContext(ShopContext)
     const handleCLick = (e) =>{
         const targetLi = e.target.closest('li');
         if (targetLi && targetLi.id) {
@@ -31,7 +32,7 @@ export const Navbar = () => {
         <div className='nav-login-cart'>
            <Link to = '/login'><button>Login</button></Link>
             <Link to ="/cart"><img src = {cart_icon} alt = ""></img></Link>
-            <div className="nav-cart-count">0</div>
+            <div className="nav-cart-count">{getTotalCartItems()}</div>
 
         </div>
     </div>

@@ -4,7 +4,6 @@ import arrow_icon from '../Assests/Frontend_Assets/breadcrum_arrow.png'
 
 const Breadcrumbs = (props) => {
     const {product} = props;
-    console.log('testingBread', product, props)
   return (
     <div className='breadcrum'>
         HOME <img src = {arrow_icon} alt = " "/> SHOP <img src = {arrow_icon} alt = " "/> {product.category} <img src = {arrow_icon} alt = " "/> {product.name}
